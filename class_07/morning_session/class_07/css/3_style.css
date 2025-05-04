@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* font-family: "Courier New", Courier, monospace; */
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* header section  */
+
+header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  padding: 0.5rem;
+}
+
+ul li a {
+  /* text-decoration: none !important; */
+  text-decoration: none;
+  color: black;
+  opacity: 0.55;
+}
+
+ul li a:hover {
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  text-decoration: underline;
+}
+
+header nav ul {
+  display: flex;
+}
+
+/* hero section  */
+main {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  gap: 2rem;
+  background-image: url(https://img.freepik.com/free-photo/3d-rendering-hexagonal-texture-background_23-2150796421.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* opacity: 0.1; */
+}
+
+/* footer section  */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 2rems;
+}
+
+footer .top {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* text-align: center; */
+}
+
+footer .top {
+  /* max-width: 50%; */
+}

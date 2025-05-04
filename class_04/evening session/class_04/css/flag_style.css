@@ -1,0 +1,144 @@
+/* cleaning all default css styles from browsers  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+body {
+  /* background-color: red; */
+  margin: 100px;
+}
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+header .logo {
+  color: cornflowerblue;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+}
+
+header .navbar ul li a {
+  font-size: 25px;
+  display: block;
+  padding: 20px;
+}
+
+header .navbar ul li a:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+header .navbar ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 120px;
+  background-color: white;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid orange;
+}
+
+header .navbar ul li:hover ul {
+  display: initial;
+  /* display: inline-block; */
+}
+
+.css_img_selector img {
+  width: 500px;
+}
+
+.logo {
+}
+
+.navbar {
+}
+
+.div_one {
+  height: 400px;
+  width: 400px;
+  background-color: cornflowerblue;
+  float: left;
+  margin: 100px 50px 40px 10px;
+  padding: 20px 20px 20px 20px;
+  text-align: justify;
+}
+
+.div_two {
+  height: 400px;
+  width: 400px;
+  background-color: black;
+  float: left;
+  /* margin: 100px; */
+  margin-top: 100px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+}
+
+.div_three {
+  /* margin-bottom: 100px; 
+  padding: 100px;  */
+}
+
+/* flag area  */
+.flag {
+  margin-top: 50px;
+  position: relative;
+  top: 600px;
+}
+
+/* flag rectangle */
+.flag .rec {
+  height: 450px;
+  width: 800px;
+  background-color: darkgreen;
+}
+
+/* flag circle  */
+.flag .rec .cir {
+  height: 200px;
+  width: 200px;
+  background-color: red;
+  border-radius: 50%;
+  /* margin: 100px 1000px; */
+  position: absolute;
+  top: 150px;
+  left: 300px;
+}
+
+/* flag stand  */
+.stand {
+  background-color: darkgoldenrod;
+  height: 800px;
+  width: 30px;
+  position: absolute;
+  border-radius: 0px 0px 10px 10px;
+}

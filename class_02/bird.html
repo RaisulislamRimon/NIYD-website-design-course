@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flying Bird Game</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #70c5ce;
+        font-family: sans-serif;
+        overflow: hidden;
+      }
+      canvas {
+        background: #70c5ce;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="gameCanvas" width="400" height="600"></canvas>
+
+    <script>
+      const canvas = document.getElementById("gameCanvas");
+      const ctx = canvas.getContext("2d");
+
+      let frames = 0;
+      const DEGREE = Math.PI / 180;
+
+      // Load images
+      const sprite = new Image();
+      sprite.src =
+        "https://openai-craft-demo.s3.amazonaws.com/flappy-bird-sprite.png"; // Use your own or an online sprite
+
+      const bird = {
+        x: 50,
+        y: 150,
+        w: 34,
+        h: 26,
+        gravity: 0.25,
+        jump: 4.6,
+        speed: 0,
+        rotation: 0,
+        draw() {
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate(this.rotation);
+          ctx.drawImage(
+            sprite,
+            276,
+            112,
+            this.w,
+            this.h,
+            -this.w / 2,
+            -this.h / 2,
+            this.w,
+            this.h
+          );
+          ctx.restore();
+        },
+        flap() {
+          this.speed = -this.jump;
+        },
+        update() {
+          this.speed += this.gravity;
+          this.y += this.speed;
+
+          if (this.y + this.h / 2 >= canvas.height) {
+            this.y = canvas.height - this.h / 2;
+            gameState.current = gameState.over;
+          }
+
+          this.rotation = this.speed >= this.jump ? 90 * DEGREE : -25 * DEGREE;
+        },
+        reset() {
+          this.speed = 0;
+          this.y = 150;
+        },
+      };
+
+      const bg = {
+        draw() {
+          ctx.fillStyle = "#70c5ce";
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+        },
+      };
+
+      const pipes = {
+        position: [],
+        top: { sX: 553, sY: 0 },
+        bottom: { sX: 502, sY: 0 },
+        w: 53,
+        h: 400,
+        gap: 120,
+        dx: 2,
+        draw() {
+          for (let i = 0; i < this.position.length; i++) {
+            let p = this.position[i];
+
+            let topYPos = p.y;
+            let bottomYPos = p.y + this.h + this.gap;
+
+            ctx.drawImage(
+              sprite,
+              this.top.sX,
+              this.top.sY,
+              this.w,
+              this.h,
+              p.x,
+              topYPos,
+              this.w,
+              this.h
+            );
+            ctx.drawImage(
+              sprite,
+              this.bottom.sX,
+              this.bottom.sY,
+              this.w,
+              this.h,
+              p.x,
+              bottomYPos,
+              this.w,
+              this.h
+            );
+          }
+        },
+        update() {
+          if (gameState.current !== gameState.game) return;
+
+          if (frames % 100 === 0) {
+            this.position.push({
+              x: canvas.width,
+              y: -Math.floor(Math.random() * this.h),
+            });
+          }
+
+          for (let i = 0; i < this.position.length; i++) {
+            let p = this.position[i];
+
+            p.x -= this.dx;
+
+            // collision detection
+            let bottomPipeY = p.y + this.h + this.gap;
+
+            if (
+              bird.x + bird.w > p.x &&
+              bird.x < p.x + this.w &&
+              (bird.y < p.y + this.h || bird.y + bird.h > bottomPipeY)
+            ) {
+              gameState.current = gameState.over;
+            }
+
+            if (p.x + this.w <= 0) {
+              this.position.shift();
+              score.value++;
+            }
+          }
+        },
+        reset() {
+          this.position = [];
+        },
+      };
+
+      const score = {
+        value: 0,
+        draw() {
+          ctx.fillStyle = "#fff";
+          ctx.strokeStyle = "#000";
+          ctx.font = "35px Arial";
+          ctx.fillText(this.value, canvas.width / 2 - 10, 50);
+          ctx.strokeText(this.value, canvas.width / 2 - 10, 50);
+        },
+        reset() {
+          this.value = 0;
+        },
+      };
+
+      const gameState = {
+        current: 0,
+        getReady: 0,
+        game: 1,
+        over: 2,
+      };
+
+      // Handle input
+      canvas.addEventListener("click", function () {
+        switch (gameState.current) {
+          case gameState.getReady:
+            gameState.current = gameState.game;
+            break;
+          case gameState.game:
+            bird.flap();
+            break;
+          case gameState.over:
+            bird.reset();
+            pipes.reset();
+            score.reset();
+            gameState.current = gameState.getReady;
+            break;
+        }
+      });
+
+      document.addEventListener("keydown", function (e) {
+        if (e.code === "Space") {
+          canvas.click();
+        }
+      });
+
+      function loop() {
+        update();
+        draw();
+        frames++;
+
+        requestAnimationFrame(loop);
+      }
+
+      function update() {
+        bird.update();
+        pipes.update();
+      }
+
+      function draw() {
+        bg.draw();
+        pipes.draw();
+        bird.draw();
+        if (
+          gameState.current === gameState.game ||
+          gameState.current === gameState.over
+        ) {
+          score.draw();
+        }
+      }
+
+      loop();
+    </script>
+  </body>
+</html>

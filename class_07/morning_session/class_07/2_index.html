@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/2_style.css" />
+    <title>Document</title>
+    <style>
+      /* * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      } */
+      ul {
+        list-style-type: none;
+        display: flex;
+      }
+      .btn {
+        text-decoration: none;
+        color: black;
+        background-color: aquamarine;
+        padding: 8px 16px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        border: 1px solid black;
+        position: relative;
+      }
+      .btn:hover {
+        box-shadow: 2px 8px 32px rgba(0, 0, 0, 0.2);
+        /* opacity: 0.2; */
+      }
+      .btn::after {
+        content: "";
+        /* width: 4px; */
+        /* height: 4px; */
+        width: 8px;
+        height: 8px;
+        background-color: blue;
+        position: absolute;
+        top: 8;
+        right: 4;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
+    </ul>
+    <a class="btn" href="https://www.google.com" target="_blank"> Button </a>
+  </body>
+</html>

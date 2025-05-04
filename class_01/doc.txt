@@ -1,0 +1,12 @@
+vs code installation
+
+extension install
+
+- live server
+- vs code icons
+- prettier - code formatter
+
+
+basic overview of html, css, javascript
+
+

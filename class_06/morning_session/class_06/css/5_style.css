@@ -1,0 +1,364 @@
+/* cleaning all default css styles from browsers  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+[class*="col-"] {
+  float: left;
+  /* border: 1px solid red; */
+}
+
+.row:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.h-50 {
+  height: 50px;
+}
+
+.h-100 {
+  height: 100px;
+}
+
+.h-150 {
+  height: 150px;
+}
+
+.h-200 {
+  height: 200px;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+.h-300 {
+  height: 300px;
+}
+
+.h-350 {
+  height: 350px;
+}
+
+.h-400 {
+  height: 400px;
+}
+
+.h-450 {
+  height: 450px;
+}
+
+.h-500 {
+  height: 500px;
+}
+
+.h-550 {
+  height: 550px;
+}
+
+.h-600 {
+  height: 600px;
+}
+
+/* responsive design  */
+
+/* @media screen and (min-width: 320px) and (max-width: 450px) {
+    .container {
+      /* display: none; * /
+      background-color: red;
+      /* background-color: red !important; * /
+      color: white;
+      border: 1px solid orange;
+    }
+  } */
+
+header {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+}
+
+header .logo {
+  color: cornflowerblue;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+header .navbar ul {
+  list-style: none;
+}
+
+header .navbar ul li {
+  position: relative;
+  display: inline-block;
+  font-size: 25px;
+}
+
+header .navbar ul li a {
+  font-size: 25px;
+  display: block;
+  padding: 20px;
+}
+
+header .navbar ul li a:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+header .navbar ul li ul {
+  display: none;
+  position: absolute;
+  left: 0;
+  width: 120px;
+  background-color: white;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  border-top: 1px solid orange;
+}
+
+header .navbar ul li:hover ul {
+  display: initial;
+  /* display: inline-block; */
+}
+
+.css_img_selector img {
+  width: 500px;
+}
+
+.slider img {
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+}
+
+.about img {
+  width: 500px;
+}
+
+.title {
+  text-align: center;
+  color: black;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.about h1 {
+  text-align: justify;
+}
+
+.about p {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.btn {
+  margin-top: 15px;
+  border: 1px solid black;
+  padding: 10px 30px;
+  display: block;
+  width: 160px;
+  height: 40px;
+  background-color: cornflowerblue;
+  font-size: 20px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.card {
+  border: 1px solid red;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.card .card-header img {
+  width: 100%;
+}
+
+/* .card img {
+  width: 350px;
+} */
+
+.card-body {
+  text-align: justify;
+}
+
+.card .card-body h3 {
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+  .col-m-1 {
+    width: 8.33%;
+  }
+
+  .col-m-2 {
+    width: 16.66%;
+  }
+
+  .col-m-3 {
+    width: 25%;
+  }
+
+  .col-m-4 {
+    width: 33.33%;
+  }
+
+  .col-m-5 {
+    width: 41.66%;
+  }
+
+  .col-m-6 {
+    width: 50%;
+  }
+
+  .col-m-7 {
+    width: 58.33%;
+  }
+
+  .col-m-8 {
+    width: 66.66%;
+  }
+
+  .col-m-9 {
+    width: 75%;
+  }
+
+  .col-m-10 {
+    width: 83.33%;
+  }
+
+  .col-m-11 {
+    width: 91.66%;
+  }
+
+  .col-m-12 {
+    width: 100%;
+  }
+
+  .h-m-50 {
+    height: 50px;
+  }
+
+  .h-m-100 {
+    height: 100px;
+  }
+
+  .h-m-150 {
+    height: 150px;
+  }
+
+  .h-m-200 {
+    height: 200px;
+  }
+
+  .h-m-250 {
+    height: 250px;
+  }
+
+  .h-m-300 {
+    height: 300px;
+  }
+
+  .h-m-350 {
+    height: 350px;
+  }
+
+  .h-m-400 {
+    height: 400px;
+  }
+
+  .h-m-450 {
+    height: 450px;
+  }
+
+  .h-m-500 {
+    height: 500px;
+  }
+
+  .h-m-550 {
+    height: 550px;
+  }
+
+  .h-m-600 {
+    height: 600px;
+  }
+}
