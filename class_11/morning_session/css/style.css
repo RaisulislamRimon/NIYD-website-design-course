@@ -37,9 +37,44 @@ header {
   padding: 10px 20px;
   font-weight: bold;
   text-transform: uppercase;
+  /* border: 1px solid red; */
+}
+
+.nav_menu ul li:hover {
+  background-color: rgb(237, 235, 235);
+  cursor: pointer;
 }
 
 .nav_menu ul li a {
   text-decoration: none;
   color: black;
+}
+
+.nav_menu ul li a:hover {
+  /* text-decoration: underline; */
+  /* background-color: gainsboro; */
+  /* color: white; */
+  /* padding: 0 30px; */
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  header ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+  }
 }
