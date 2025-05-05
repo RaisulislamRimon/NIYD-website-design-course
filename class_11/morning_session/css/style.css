@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header_section {
+  background-color: rgb(249, 249, 249);
+  padding: 0 50px;
+}
+
+.container {
+  width: 80%;
+}
+
+header {
+  /* border: 1px solid red; */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.nav_menu {
+  margin: 20px;
+}
+
+.nav_menu ul {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav_menu ul li {
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav_menu ul li a {
+  text-decoration: none;
+  color: black;
+}
