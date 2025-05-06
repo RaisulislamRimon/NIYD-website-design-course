@@ -97,5 +97,34 @@
 .divider {
   width: 40%;
   border: 1px solid #5fc3ff;
-  margin: 0 auto;
+  margin: 25px auto;
+}
+
+.banner-inner p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 60px;
+}
+
+.banner-inner .btn-info {
+  text-decoration: none;
+  border: 1px solid #15a4fa;
+  padding: 15px 20px;
+  margin: 35px 0;
+  color: #fff;
+  background: transparent;
+  transition: 1s;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.banner-inner .btn-info:hover {
+  background: #15a4fa;
+  color: #fff;
+  font-size: 18px;
+}
+
+.icon {
+  margin-top: 150px;
 }
