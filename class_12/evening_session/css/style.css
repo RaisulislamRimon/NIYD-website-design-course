@@ -233,3 +233,16 @@
 }
 
 /* portfolio section end */
+
+/* footer section start  */
+
+.footer_section {
+  width: 100%;
+  float: left;
+  /* background: #f6f9f9; */
+  background: skyblue;
+  padding: 20px 0;
+  /* overflow: hidden; */
+}
+
+/* footer section end  */
