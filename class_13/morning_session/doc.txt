@@ -31,7 +31,10 @@ Guideline:
     - Basic Input & Output 
 
 - Variable is memory location of address
-
+    - city 
+    - cityname
+    - city_name - zend style 
+    - cityName - camelCase
 
 
 

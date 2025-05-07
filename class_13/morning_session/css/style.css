@@ -4,3 +4,13 @@
   font-size: 70px;
   padding: 30px;
 }
+
+#mainImage {
+  width: 500px;
+  height: 400px;
+}
+
+.small_image {
+  height: 100px;
+  width: 121px;
+}
