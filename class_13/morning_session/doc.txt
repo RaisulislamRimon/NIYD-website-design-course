@@ -2,9 +2,9 @@
 - build
 
 parts of webpage
-    - structure and content = HTML
-    - presentation = CSS
-    - behaviour = JAVASCRIPT
+    - structure and content = HTML - Markup Language
+    - presentation = CSS - Stylesheet Language
+    - behaviour = JAVASCRIPT - Pure Object Oriented scripting Language
 
 
 
