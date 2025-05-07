@@ -1,2 +1,10 @@
 - interprete
 - build
+
+parts of webpage
+    - structure and content = HTML
+    - presentation = CSS
+    - behaviour = JAVASCRIPT
+
+
+
