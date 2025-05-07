@@ -4,7 +4,60 @@
 parts of webpage
     - structure and content = HTML - Markup Language
     - presentation = CSS - Stylesheet Language
-    - behaviour = JAVASCRIPT - Pure Object Oriented scripting Language
+    - behaviour = JAVASCRIPT/JS - Pure Object Oriented scripting Language
 
 
+4 Major rules of OOP:
+    - Class
+    - Property
+    - Method
+    - Object 
+
+
+
+C# , JAVA - Object Oriented Language
+
+
+Guideline:
+-----------
+    - Basic Syntax - (file extension): .html, .js 
+    - Variable & Data Type 
+    - Operator
+    - Statement
+    - Array
+    - Object
+    - Event & Listener 
+    - DOM 
+    - Basic Input & Output 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+MD HABIBUR RAHMAN - 07 May 2025 - NIYD
 
